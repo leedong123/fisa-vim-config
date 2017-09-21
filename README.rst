@@ -5,9 +5,9 @@ fisa-vim-config的中文翻译版本
 
 这是一个给pythoner的vim配置，添加了很多特性
 
-安装
-::
-sudo apt-get install curl vim exuberant-ctags git ack-grep
-sudo pip install pep8 flake8 pyflakes isort yapf
+安装::
+
+  sudo apt-get install curl vim exuberant-ctags git ack-grep
+  sudo pip install pep8 flake8 pyflakes isort yapf
 
 
