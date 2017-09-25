@@ -22,20 +22,20 @@
 
 * **Classes/module browser** that lists classes, functions, methods, and such of the current file, and navigates to them when ENTER is pressed. Toggle it with ``F4``.
 
-* **Pending tasks browser** pressing ``F2``. This reads the current file searching for comments that start with "TODO", "FIXME", and such, and shows them on a list that allows navigation similar to the class browser.
+* **待处理任务浏览** 按 ``F2``. 它会读取当前文件并查找诸如"TODO","FIXME" 等内容,在列表中显示它们,并允许类似于类浏览器的导航.
 
-* **Error checking of code** using Syntastic (it will detect unused variables or imports, syntax errors, and such), for several languages, highlighting the errors and warnings in the code. You can open an errors list with ``\e``. In python, the error checking includes **pep8** validation, and **pylint**.
+* **代码语法检查** using Syntastic (it will detect unused variables or imports, syntax errors, and such), for several languages, highlighting the errors and warnings in the code. You can open an errors list with ``\e``. In python, the error checking includes **pep8** validation, and **pylint**.
 
-* **Grep code recursively** and navigate the results:
+* **递归查询代码** 并浏览结果:
 
-	* ``,r`` uses the ack command (a kind of grep optimized for code search), lists the found matches, and allows you to open them with ENTER.
-	* ``,wr`` does the same, but searching the word under the cursor.
+	* ``,r`` 使用ack命令 (一种优化过的用来进行代码查询的工具), 列出找到的匹配并允许你使用ENTER打开.
+	* ``,wr`` 相同的效果, 但是搜索当前光标下的单词.
 
 * Some settings for better **tabs and spaces handling**.
 
-* **Better file browser**, toggle it with ``F3``, or open it with your current file selected using ``,t``.
+* **更好的文件浏览**,  ``F3`` 关闭, 使用 ``,t`` 选择文件并打开.
 
-* **Results count** while searching text.
+* **结果计数** 搜索文本的时候.
 
 * **搜索、阅读python文档** 使用``:Pydoc``命令. 例如: ``:Pydoc collections`` (也可以在当前的单词上使用vim的默认帮助键绑定: ``Shift-K``).
 
@@ -50,7 +50,7 @@
 	* ``tl`` = 在侧栏显示当前选项卡及其内部窗口的列表。你可以浏览！
 	* ``ts`` = 复制当前选项卡。
 
-	The mappings starting with the ``t`` letter work only on command mode, but the mappings with ``Ctrl-Shift`` work on both, command and insert mode.
+	以 ``t`` 开头的命令只在命令模式下有效，但是 ``Ctrl-Shift`` 在命令模式和插入模式都有效。
 
 * **简易窗口浏览** 使用 ``Alt-arrows`` .
 
@@ -63,7 +63,7 @@
 	* **shell-like autocompletion of commands and paths** (autocomplete the common part and show matching options).
 	* 默认开启**语法高亮**.
 
-* **Python interpreter inside vim**, or any other console. They are opened as a buffer using the command ``:ConqueTerm``. Examples: ``:ConqueTerm python``, ``:ConqueTerm bash``.
+* **vim中的python交互**, 或者别的控制台. 使用命令 ``:ConqueTerm`` ,他们以缓冲的方式打开. 例如: ``:ConqueTerm python``, ``:ConqueTerm bash``.
 
 * **以sudo保存当前文件** 使用 ``:w!!``.
 
@@ -71,9 +71,9 @@
 
 * **Beautiful status line allways visible**, with colors, breadcrumbs and useful information about file type, encoding and position. When working with python files, it also displays the current python function or class where the cursor is.
 
-* **Automatically removes trailing spaces** when saving python files.
+* **自动删除尾随空格** 保存 python 文件的时候.
 
-* **Smart autoclosing of (, [, and {**
+* **智能闭合 (, [, and {**
 
 * **Beautiful color schemes for on vim with 256 colors (fisa colorscheme) and gvim (wombat colorscheme)**.
 
@@ -81,14 +81,14 @@
 
 * **2 spaces indentation for html and javascript** (can disable it removing two lines from the ``.vimrc``).
 
-* **Thousands of code snippets for many languages** with SnipMate. Example, in python you can write ``cl`` and press ``tab`` (while in inser mode), and it will insert the boilerplate code of a common python class (then use ``tab`` to navigate the snippet fields).
+* **各种编程语言的代码片段** 使用 SnipMate. 例如, 在python中你可以输入 ``cl`` ,之后按下 ``tab`` (在插入模式中), 它就会插入python类通用格式 (之后使用 ``tab`` 来浏览代码片段).
 
-* **Zen coding** for html: generate lots of html code writing simple and short expressions.
-	Example:
+* **Zen coding** html使用: 生成大量html的简易代码表达.
+	例如:
 
-	1. write ``#books>ul>li.book*5>a``
-	2. press ``Ctrl-y ,``
-	3. it will generate:
+	1. 写 ``#books>ul>li.book*5>a``
+	2. 按下 ``Ctrl-y ,``
+	3. 它会生成e:
 
 		 ::
 
@@ -112,7 +112,7 @@
 					</ul>
 			</div>
 
-	Learn more on the plugin `site <https://github.com/mattn/zencoding-vim/>`_.
+	插件网站上查看更多 `site <https://github.com/mattn/zencoding-vim/>`_.
 
 * **Git and other vcs integration**, with commands such as: ``:GitStatus``, ``:GitDiff``, ``:GitBlame``, ``:GitLog``, ``:GitCommit``, or simply ``:Git`` with your own command. Key mappings and syntax highlighting for git displays. Displays icons on the side of each line based on the result of a diff of the current file (example: if you added a line and still didn't commit the file, that line will have a green ``+`` on its side). And finally, when on a changed file you can **jump through changes** using ``\sn`` and ``\sp``.
 
@@ -140,14 +140,14 @@
 
 * **Drag visual blocks** (blocks selected on ``Ctrl-v`` and ``Shift-v`` visual modes) with ``Shift-Alt-arrows``, or even **duplicate** them with ``D``.
 
-* **Simple window chooser**: press ``-`` and you will see big green letters for each window. Just press the letter of the window you want to activate.
+* **简单窗口选择**: 按 ``-`` ,你会看到每个窗口都有大的绿色字母,只需按下需要激活的窗口的字母.
 
 * **Paint css color** values with the actual color.
 
 * **Format Python code** using yapf (``:YapfFullFormat`` formats the whole file, and has other commands as well, explained `here <https://github.com/pignacio/vim-yapf-format>`_. **Works only if you have a vim compiled with python 2, not python 3**).
 
-* **Custom configs by folder** add a ``.vim.custom`` file in the project's root folder with whatever configs you want to customize for that project.
-	For example, if you have a project tree like this example and you want to exclude ``folder_x`` from FuzzyFinder, put ``let g:ctrlp_custom_ignore["dir"] = g:ctrlp_custom_ignore["dir"] . '|\v[\/]folder_x$'`` in the ``.vim.custom`` file.
+* **按文件夹自定义配置** 在工程的根目录添加一个 ``.vim.custom`` 文件.
+	例如,如果你想要一个像下面这样的工程目录树，并且你不希望 ``folder_x`` 被检索, 在 ``.vim.custom`` 文件中写入 ``let g:ctrlp_custom_ignore["dir"] = g:ctrlp_custom_ignore["dir"] . '|\v[\/]folder_x$'`` .
 
 	::
 
