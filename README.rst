@@ -18,6 +18,6 @@ fisa-vim-config的中文翻译版本
 	:PlugInstall
 	:PlugUpdate
 
-`一些特性 <https://github.com/fisadev/fisa-vim-config/blob/master/docs/features.rst>`_
+`一些特性 <https://github.com/strange-jiong/fisa-vim-config/blob/master/docs/features.rst>`_
 
 
