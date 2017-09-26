@@ -1,12 +1,12 @@
 主要重要特性包括以下:
 
-* **插件管理使用 Vim-plug**! You can easily install or remove plugins, and they are installed into ``.vim/plugged/``. More info `here <https://github.com/junegunn/vim-plug>`_
+* **插件管理使用 Vim-plug**! 你可以方便地安装或者卸载插件,它们被装在 ``.vim/plugged/`` 文件夹内. 更多信息点击 `here <https://github.com/junegunn/vim-plug>`_
 
-* **智能补全**, sometimes using python instrospection (completion of module names, instance methods and attributes) and sometimes text-based (used words) (从版本4.0开始, 它变得更加智能!). And with neocomplcache, it even can autocomplete with typos, thanks to the fuzzy completion settings.
+* **智能补全**, 使用python的instrospection (补全模块名字,实例方法,属性) 或者基于文本 (从版本4.0开始, 它变得更加智能!). neocomplcache甚至可以自动补全打字错误.
 
-* **Fuzzy file, code and command finder** (like Textmante or Sublime Text 2):
+* **模糊文件代码命令查询** (与Textmante或者Sublime Text 2相似):
 
-	* ``,e`` = open file (like the original :e) but with recursive and fuzzy file name matching. Example: if you type "mopy" it will find a file named "models.py" placed on a subdirectory. And allows you to open the selected file on a new tab with ``Ctrl-t``!
+	* ``,e`` = 打开文件 (就像是最初的 :e) ,可以进行地柜以及模糊匹配. 例如: 如果你输入 "mopy" ,它会找到子文件夹中的 "models.py". 你可以使用 ``Ctrl-t`` 在新标签中打开选中文件!
 	* ``,g`` = fuzzy symbol finder (classes, methods, variables, functions, ...) on the current file. Example: if you type "usr" it will find the User class definition on the current file. ``,G`` does the same but on all opened files.
 	* ``,c`` = fuzzy command finder (internal vim commands, or custom commands). Example: if you type "diff" it will find ``:GitDiff``, ``:diffthis``, and many other similar commands.
 	* ``,f`` = 在所有打开文件中进行模糊文本查询。 例如: 如果你打 "ctm=6"，它会找到包含 "current_time = 16"的一行。
@@ -24,7 +24,7 @@
 
 * **待处理任务浏览** 按 ``F2``. 它会读取当前文件并查找诸如"TODO","FIXME" 等内容,在列表中显示它们,并允许类似于类浏览器的导航.
 
-* **代码语法检查** using Syntastic (it will detect unused variables or imports, syntax errors, and such), for several languages, highlighting the errors and warnings in the code. You can open an errors list with ``\e``. In python, the error checking includes **pep8** validation, and **pylint**.
+* **代码语法检查** 使用 Syntastic (它能检测未使用的变量、导入模块、语法错误等), 对于某些编程语言，高亮错误,并给出警告.你可以使用 ``\e`` 打开错误列表. python语法检查包括 **pep8** 和 **pylint**.
 
 * **递归查询代码** 并浏览结果:
 
@@ -122,7 +122,7 @@
 
 * **Indentation defined text objects** for the editing language, named ``i``. For example, you can change an entire indented code block with ``cii``, or the indented block and its header line with ``cai`` (also yank, delete, ...).
 
-* **Indentation based movements**, move to the header of your current python block with ``[-``, to the end of the block with ``]-``, and more (short reference `here <https://github.com/jeetsukumaran/vim-indentwise>`_).
+* **基础代码块移动**使用 ``[-`` 移动至当前python代码块的开头,  ``]-`` 移至末尾, 更多信息 (简短参考 `here <https://github.com/jeetsukumaran/vim-indentwise>`_).
 
 * **Python class and method/function text objects** for the editing language, named ``C`` and ``M``. For example, you can change an entire function content with ``ciM``, or delete a class including its header with ``daC``.
 
@@ -144,7 +144,7 @@
 
 * **Paint css color** values with the actual color.
 
-* **Format Python code** using yapf (``:YapfFullFormat`` formats the whole file, and has other commands as well, explained `here <https://github.com/pignacio/vim-yapf-format>`_. **Works only if you have a vim compiled with python 2, not python 3**).
+* **格式化python代码** 使用 yapf (``:YapfFullFormat`` 格式化整个文件, 详情 `here <https://github.com/pignacio/vim-yapf-format>`_. **Works only if you have a vim compiled with python 2, not python 3**).
 
 * **按文件夹自定义配置** 在工程的根目录添加一个 ``.vim.custom`` 文件.
 	例如,如果你想要一个像下面这样的工程目录树，并且你不希望 ``folder_x`` 被检索, 在 ``.vim.custom`` 文件中写入 ``let g:ctrlp_custom_ignore["dir"] = g:ctrlp_custom_ignore["dir"] . '|\v[\/]folder_x$'`` .
