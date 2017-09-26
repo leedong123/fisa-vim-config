@@ -12,10 +12,12 @@ fisa-vim-config的中文翻译版本
 	mv ~/.vimrc ~/.vimrcbak
 	mv vimrcc ~/.vimrc
 
-如果打开vim没有自动安装插件的话,输入一下命令::
+如果打开vim没有自动安装插件的话，输入以下命令::
 
 	:PlugClean
 	:PlugInstall
 	:PlugUpdate
+
+`一些特性 <https://github.com/fisadev/fisa-vim-config/blob/master/docs/features.rst>`_
 
 
